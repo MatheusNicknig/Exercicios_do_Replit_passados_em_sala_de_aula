@@ -1,0 +1,150 @@
+// Problema 1
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Digite a temperatura em Celsius: ");
+        double temperaturaCelsius = scanner.nextDouble();
+
+        double temperaturaFahrenheit = temperaturaCelsius * 1.8 + 32;
+        double temperaturaKelvin = temperaturaCelsius + 273.15;
+        double temperaturaReaumur = temperaturaCelsius * 0.8;
+        double temperaturaRankine = temperaturaCelsius * 1.8 + 32 + 459.67;
+
+        System.out.println("Problema 1");
+        System.out.println("A temperatura em C (Celsius) é: " + temperaturaCelsius);
+        System.out.println("A temperatura em F (Fahrenheit) é: " + temperaturaFahrenheit);
+        System.out.println("A temperatura em K (Kelvin) é: " + temperaturaKelvin);
+        System.out.println("A temperatura em Re (Réaumur) é: " + temperaturaReaumur);
+        System.out.println("A temperatura em Ra (Rankine) é: " + temperaturaRankine);
+}
+}
+
+// Problema 2
+public class Main {
+  public static void main(String[] args) {
+      // Definição dos números
+      int numero1 = 8;
+      int numero2 = 9;
+      int numero3 = 7;
+
+      int numero4 = 4;
+      int numero5 = 5;
+      int numero6 = 6;
+
+      // Cálculo das médias
+      double media1 = (numero1 + numero2 + numero3) / 3.0;
+      double media2 = (numero4 + numero5 + numero6) / 3.0;
+
+      // Exibição dos resultados
+      System.out.println("Problema 2");
+      System.out.println("A média aritmética de " + numero1 + ", " + numero2 + " e " + numero3 + " é " + media1);
+      System.out.println("A média aritmética de " + numero4 + ", " + numero5 + " e " + numero6 + " é " + media2);
+      System.out.println("A soma das médias é " + (media1 + media2));
+      System.out.println("A média das médias é " + ((media1 + media2) / 2) +"\n");
+  }
+}
+
+// Problema 3
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        System.out.println("Problema 3");
+        System.out.println("Digite um número para descobrir o seu antecessor e o seu sucessor: ");
+      
+        Scanner scanner = new Scanner(System.in);
+        int numeroDigitado = scanner.nextInt();
+
+        int antecessor = numeroDigitado - 1;
+        int sucessor = numeroDigitado + 1;
+
+        System.out.println("O número digitado foi " + numeroDigitado + ", portanto o seu antecessor é " + antecessor +
+                " e seu sucessor é " + sucessor);
+  }
+}
+
+// Problema 4
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        for (int i = 0; i < 10; i++) {
+            System.out.println("Digite a altura da pessoa em metros: ");
+            double altura = scanner.nextDouble();
+            double pesoIdeal = (72.7 * altura) - 58;
+
+            System.out.println("Digite o sexo da pessoa (1-Feminino, 2- Masculino): ");
+            int sexo = scanner.nextInt();
+
+            if (sexo == 1) {
+                System.out.println("O peso ideal para uma mulher com " + altura + "m de altura é: " + pesoIdeal + "kg");
+            } else if (sexo == 2) {
+                System.out.println("O peso ideal para um homem com " + altura + "m de altura é: " + pesoIdeal + "kg");
+            } else {
+                System.out.println("Opção de sexo inválida. Por favor, tente novamente.");
+            }
+        }
+        scanner.close();
+  }
+}
+
+// Problema 5
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner estoque = new Scanner(System.in);
+        System.out.println("Digite o valor mínimo de peças no estoque:");
+        int estoqueMinimo = estoque.nextInt();
+        System.out.println("Digite o valor máximo de peças no estoque:");
+        int estoqueMaximo = estoque.nextInt();
+        int estoqueMedia = (estoqueMinimo + estoqueMaximo) / 2;
+        System.out.println("O estoque médio é de " + estoqueMedia + " peças");
+    }
+}
+
+// Problema 6
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        System.out.println("A cotação do dólar atual é: ");
+        double cotacaoDolar = input.nextDouble();
+
+        System.out.println("Quantos dólares você quer converter? ");
+        double valorDolar = input.nextDouble();
+
+        double conversao = valorDolar * cotacaoDolar;
+        System.out.println("O valor em reais pela cotação de dólares é de: " + conversao);
+}
+}
+
+// Problema 7
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Quanto tempo demorou até o destino?");
+        int tempo = scanner.nextInt();
+
+        System.out.println("Velocidade média?");
+        int vmedia = scanner.nextInt();
+
+        int distancia = vmedia * tempo;
+
+        double litros_usados = distancia / 12.0; 
+
+        System.out.println("A distancia percorrida foi de: " + distancia);
+        System.out.println("O tempo gasto foi de: " + tempo);
+        System.out.println("A velocidade média foi de: " + vmedia);
+        System.out.println("A quantidade de litros usados foi de: " + litros_usados);
+
+        scanner.close(); 
+    }
+}
